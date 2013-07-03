@@ -1,0 +1,97 @@
+body {
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 12pt;
+	overflow: none !important;
+
+	#print {
+		display: block;
+		margin-left: 44%;
+		position: absolute;
+		top: 40pt;
+		font-size: 0.75em;
+		color: #CCC;
+	}
+
+	#wrap {
+		
+		header {
+		
+			h1 {
+				font-weight: normal;
+				font-size: 1.4em;
+				border-bottom: 0.5pt solid #777;
+				margin: 0 0 0.5em;
+				padding: 0 0 0.25em;
+			}
+			
+			nav {
+				display: none;
+			}
+		}
+		
+		.slide-deck {
+			
+			.slide {
+				border: 0.5pt solid #CCC;
+				margin: 0.5em 0;
+				padding: 0.5em;
+				max-width: 40%;
+				min-height: 15%;
+				display: block;
+				page-break-inside: avoid;
+				
+				h1 {
+					font-weight: normal;
+					font-size: 1.1em;
+					margin: 0;
+					padding: 0 0 0.25em;
+				}
+				
+				h2 {
+					font-weight: normal;
+					font-style: italic;
+					font-size: 0.9em;
+					margin: 0;
+					padding: 0 0 0.25em;
+				}
+				
+				img {					
+					max-width: 100%;
+					height: auto;
+					width: auto;
+				}
+				
+				p, ul, ol {
+					font-size: 0.75em;
+				}	
+				
+				cite {
+					font-size: 0.6em;
+				}			
+				
+				blockquote {
+					margin: 0.4em 0.5em;
+					font-size: 0.825em;
+					font-style: italic;
+				}
+				
+				a:link:after, a:visited:after { 
+					content:" (" attr(href) ") ";
+				}
+				
+				iframe {
+					display: none;
+				}
+				
+				iframe:after {
+					content:" (" attr(src) ") ";
+				}
+				
+			}
+			
+		}
+		
+	}
+
+}
+
