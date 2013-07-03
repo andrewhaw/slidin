@@ -1,0 +1,210 @@
+
+	<!-- All decks should be started with the <article class="slide-deck"> tag -->	
+	<article class="slide-deck">
+
+		<!-- Each slide should start with the <section class="slide"> tag -->
+		<section class="slide" id="welcome-to-slidin">
+		
+			<!-- Content of your slide goes in here; whatever you see fit -->
+			<h1>Welcome to Slidin</h1>
+		
+			<p>This is a brief introduction on how to set up Slidin' on your own server. To install Slidin', you will require:</p>
+			<ul>
+				<li>A server with PHP 5 or higher</li>
+				<li>FTP access</li>
+				<li>An understanding of HTML markup</li>
+				<li>Some patience</li>
+			</ul>
+			
+		</section>
+
+	
+	
+		<section class="slide" id="download-slidin">
+			
+			<h1>Download Slidin'</h1>
+		
+			<p>The first step is to <a href="/dls/Slidin-v0.1.zip">download Slidin'</a>. In that folder you will find a series of files you should upload to your server. Once uploaded, visit the URL you have uploaded the files to and see if the basic template still loads.</p>
+			
+			<p>For example, if you upload Slidin' to the main level of your website (ie. spatula.ca/slidin/), visit that folder to access the main page.</p>
+			
+		</section>
+
+
+	
+		<section class="slide" id="common-install-problems">
+			
+			<h1>Common Install Problems</h1>
+		
+			<p>Common issues when installing Slidin' may include:</p>
+			<ul>
+				<li><a href="http://en.wikipedia.org/wiki/Chmod">File permission errors</a>; files should be set to 644 and folders to 755</li>
+				<li>.htaccess problems; ensure your server allows mod_rewriting</li>
+				<li>Can't access the index; ensure the folder has uploaded and you can run .PHP files</li>
+			</ul>
+				
+		</section>
+
+
+	
+		<section class="slide" id="slidin-basics-structure">
+			
+			<h1>Slidin' Basics</h1>
+			<h2>File structure</h2>
+		
+			<p>Slidin automatically maps any .htm files in the 'content' folder to a URL. For example, if you have a file called <em>'Test-Presentation.htm'</em>, the presentation would be accessible through <em>yoururl.ca/slidin/Test-Presentation</em> and would also be listed along with any other .htm files (in the content folder) on the main page at yoururl.ca/slidin/</p>
+
+				
+		</section>
+
+
+	
+		<section class="slide" id="slidin-basics-setup">
+			
+			<h1>Slidin' Basics</h1>
+			<h2>Setup</h2>
+		
+			<p>Make sure to edit the <em>'setup.php'</em> file available in the <em>'inc'</em> folder to set a standard title for all your slide decks. It also allows you to change the file-type extension used for slide decks (from the default .htm), though you should only consider changing it if you are looking to run custom server-side (ie. PHP) scripts in your decks themselves.</p>
+
+				
+		</section>
+
+
+	
+		<section class="slide" id="slidin-basics-markup">
+			
+			<h1>Slidin' Basics</h1>
+			<h2>Markup</h2>
+		
+			<p>Markup for Slidin' is like coding a webpage. There are two main pieces of code that are absolutely necessary, and any other code can be injected later on:</p>
+			<p><strong>&lt;article class="slide-deck"&gt;</strong> - Every slide deck must be wrapped in this tag for the deck to work.</p>
+			<p><strong>&lt;section class="slide"&gt;</strong> - Every slide must be wrapped in this tag as otherwise the slide transitioning will not work. </p>
+			<p><a href="#slidin-basics-markup-example" class="next">The next slide</a> has an example.</p>
+
+				
+		</section>
+
+
+	
+		<section class="slide" id="slidin-basics-markup-example">
+			
+			<h1>Slidin' Basics</h1>
+			<h2>Markup Example</h2>
+		
+			<p><strong>&lt;article class="slide-deck"&gt;</strong><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<strong>&lt;section class="slide"&gt;</strong><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Slide title&lt;/h1&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Some slide content&lt;p&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<strong>&lt;/section&gt;</strong><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<strong>&lt;section class="slide"&gt;</strong><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Slide number 2 title&lt;/h1&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<strong>&lt;/section&gt;</strong><br>
+			<strong>&lt;/article&gt;</strong>
+			</p>
+
+				
+		</section>
+
+
+	
+		<section class="slide" id="slidin-basics-styling">
+			
+			<h1>Slidin' Basics</h1>
+			<h2>Styling</h2>
+		
+			<p>Slidin' includes basic styles for the following tags:</p>
+			<p>The paragraph &lt;p&gt; tag.</p>
+			<ul>
+				<li>Unordered</li>
+				<li>and</li>
+			</ul>
+			<ol>
+				<li>ordered</li>
+				<li>lists</li>
+			</ol>
+			<blockquote>"Blockquotes"</blockquote>
+			<cite>Citations</cite>
+
+				
+		</section>
+
+
+	
+		<section class="slide" id="slidin-basics-styling-2">
+			
+			<h1>Slidin' Basics</h1>
+			<h2>Styling (Part 2)</h2>
+		
+			<p>Slidin' includes some additional classes:</p>
+			<ul>
+				<li>The 'whisper' class: <span class="whisper">this is quiet</span></li>
+				<li>The 'important' class: <span class="important">this is important</span></li>
+				<li>The 'blink' class: <span class="blink">this is annoying</span></li>
+			</ul>
+
+				
+		</section>
+
+
+	
+		<section class="slide" id="slidin-advanced-markup">
+			
+			<h1>Slidin' Advanced</h1>
+			<h2>Markup</h2>
+		
+			<p>To ensure that your slides can be accessed directly after the fact, add a meaningful id to each slide's <em>&lt;section&gt;</em> tag:<br>
+			&lt;section class="slide" <strong>id="slidin-advanced-markup"</strong>&gt;</p>
+			<p>Adding an id means that your slides will each be uniquely accessible through the URL for your slides, in addition to #id (ie. yoururl.ca/slidin/A-Presentation#id)</p>
+
+				
+		</section>
+
+
+	
+		<section class="slide" id="slidin-advanced-styling">
+			
+			<h1>Slidin' Advanced</h1>
+			<h2>Styling and Interaction</h2>
+		
+			<p>To apply custom styles or interactions to specific elements of your slide deck, you can build your own CSS or JS files. Slidin' has been set up to look for a folder and CSS file which share the same name of your slide deck's .htm file.</p>
+			<p>For example, for <em>'A-Presentation.htm'</em>, Slidin' will look for a folder in 'content' that is called <em>'A-Presentation'</em>. If there is a <em>'A-Presentation.css'</em> or <em>'A-Presentation.js'</em> file in there, Slidin' will automatically apply them to the associated slide deck.</p>
+			<p>Slidin uses the jQuery library to ease building custom interactions.</p>
+
+				
+		</section>
+		
+		
+
+
+	
+		<section class="slide" id="slidin-advanced-encryption">
+			
+			<h1>Slidin' Advanced</h1>
+			<h2>Email encryption</h2>
+		
+			<p>To avoid spam, Slidin' includes a method with which to encrypt your email address. Type your email address in the box below to generate the HTML code below:</p>
+			<input type="text" class="rot13">
+			<p>&lt;a href="#insertslideid" data-e="<span class="encoded"></span>" data-subject="Insert Email Message Subject" class="e"&gt;Your email link&lt;/a&gt;</p>
+
+				
+		</section>
+		
+		
+
+
+	
+		<section class="slide" id="slidin-more-to-come">
+			
+			<h1>Slidin' more to come</h1>
+			<h2>There is more to come soon</h2>
+		
+			<p>Please stand-by.</p>
+
+				
+		</section>
+		
+		
+		
+
+	</article>
+	

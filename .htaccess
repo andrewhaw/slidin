@@ -1,0 +1,7 @@
+# Making some perty URLS
+
+# Between the ^ and $ is a regular expression which looks for the deck title
+RewriteEngine On
+#RewriteBase /slidin/
+RewriteRule ^()$ /slidin/index.php [L]
+RewriteRule ^([A-Za-z0-9\-_]*)$ /slidin/index.php?s=$1 [L]
