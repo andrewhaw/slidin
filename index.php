@@ -13,6 +13,7 @@
 	// Please avoid editing pages unless you know what's happening
 	//
 	// To do list (in no particular order):
+	// - home/print navigation on first slide
 	// - navigate directly to slide
 	// - proper adaptive design
 	// - menu/slide overview
