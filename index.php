@@ -4,19 +4,21 @@
 <?php
 
 	// ---------------------------------------------------------------------------------
-	// DECK.JS is build by Caleb of I make web-things http://imakewebthings.com/deck.js/
-	// Slidin' is a PHP/DECK.JS combo package built as an easy-to-deploy slide package
-	// v0.1 - July 2013
+	// DECK.JS is build by Caleb of 'I make web-things' (http://imakewebthings.com/deck.js/)
+	// CODEMIRROR is build by Marijn Haverbek (http://codemirror.net/)
+	// Slidin' is a PHP/DECK.JS/CODEMIRROR combo package built as an easy-to-deploy slide package
+	// v0.2 - July 2013
 	//
 	// To set universals, please visit setup.php in the '/inc' folder
-	// Please avoid editing this page unless you know what's happening
+	// Please avoid editing pages unless you know what's happening
 	//
 	// To do list (in no particular order):
 	// - navigate directly to slide
-	// - adaptive design
+	// - proper adaptive design
 	// - menu/slide overview
 	// - built-in functions (allow for auto-build of video/photo gallery)
 	// - full-size backgrounds for slides
+	// - hide/show codemirror (for smaller/mobile devices)
 	// 
 	// ---------------------------------------------------------------------------------
 	
@@ -73,9 +75,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php echo ($pgTitle); ?></title>
 		<?php if ($s!="") { include_once("./inc/deck-css.php"); } ?>
-		<link rel="stylesheet" href="<?php echo $dir; ?>slidin/css/normalize.css" media="screen">
-		<link rel="stylesheet" href="<?php echo $dir; ?>slidin/css/screen.css" media="screen">
-		<link rel="stylesheet" href="<?php echo $dir; ?>slidin/css/print.css" media="print">
+		<link rel="stylesheet" href="<?php echo $dir; ?>slidin/css/normalize.css">
+		<link rel="stylesheet" href="<?php echo $dir; ?>slidin/css/slidin-v0.1.css">
 		<?php if ($css!="") { echo $css; } ?>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>

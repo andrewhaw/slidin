@@ -51,7 +51,44 @@ $(document).ready(function(){
 	    });
 	
 	});
+	
+	
+	// Code partially taken from http://www.hawkee.com/snippet/9844/ to convert <code> into Codemirror
+	// Override code fragments with codemirror editable sections
+	$('code').each(function() {	
 
+		//var currentNode = $(this).
+		var lang = $(this).attr('lang');
+		var template = '<div class="code"><textarea>'+$(this).html()+'</textarea></div>';
+
+      	// Take the code and put it into the textarea.
+		$(this).html(template);
+      
+      	var cm = CodeMirror.fromTextArea($(this).find('textarea')[0], {
+				lineNumbers: true,
+				matchBrackets: true,
+				onKeyEvent: function(e, s){
+                if (s.type == "keyup")
+                {
+                    $("samp").filter(":visible").html(cm.getValue()); 
+                }
+            }
+
+
+		});
+		
+      	setMode(cm, lang);
+	});
+	
+	// On input of CodeMirror code, do stuff
+	/*
+	$(".code textarea").keyup(function() { 
+		$("h1").html("typing");
+		var html = $(this).val();
+		$("samp").html(html);
+		$(this).parent("code").next("samp").html(html);
+	});
+*/
 
 		
 });
@@ -65,3 +102,21 @@ $.extend(true, $.deck.defaults, {
 
    countNested: false
 });
+
+
+// Code partially taken from http://www.hawkee.com/snippet/9844/ to convert <code> into Codemirror
+function setMode(cm, mode) {
+	if(mode !== undefined) {
+		var script = 'js/mode/'+mode+'/'+mode+'.js';
+		if (mode == "htmlmixed") {
+			$.getScript('js/mode/xml/xml.js', function() {});
+			$.getScript('js/mode/css/css.js', function() {})
+		}
+
+		$.getScript(script, function(data, success) {
+			if(success) cm.setOption('mode', mode);
+			else cm.setOption('mode', 'clike');
+		});
+	}
+	else cm.setOption('mode', 'clike');
+}

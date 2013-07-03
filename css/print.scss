@@ -19,7 +19,7 @@ body {
 			h1 {
 				font-weight: normal;
 				font-size: 1.4em;
-				border-bottom: 0.5pt solid #777;
+				border-bottom: 1pt solid #777 !important;
 				margin: 0 0 0.5em;
 				padding: 0 0 0.25em;
 			}
@@ -32,12 +32,12 @@ body {
 		.slide-deck {
 			
 			.slide {
-				border: 0.5pt solid #CCC;
+				display: block;
+				border: 1pt solid #EEE !important;
 				margin: 0.5em 0;
 				padding: 0.5em;
 				max-width: 40%;
 				min-height: 15%;
-				display: block;
 				page-break-inside: avoid;
 				
 				h1 {
@@ -45,6 +45,7 @@ body {
 					font-size: 1.1em;
 					margin: 0;
 					padding: 0 0 0.25em;
+					border-bottom: 0 !important;
 				}
 				
 				h2 {

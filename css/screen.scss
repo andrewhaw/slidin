@@ -279,6 +279,10 @@ body {
 			margin: 0.5em 0;
 		}
 		
+		samp {
+			font-family: "Open Sans", Arial, Verdana, sans-serif;
+		}
+		
 		.whisper {
 			color: #efefef;
 			transition: 0.5s;
@@ -286,6 +290,14 @@ body {
 			&:hover, &:focus {
 				color: #AAA;
 			}
+		}
+		
+		.code {
+			border-top: 1px solid #777;
+			width: 100%;
+			position: fixed;
+			bottom: 0;
+			left: 0;
 		}
 		
 		.blink {
