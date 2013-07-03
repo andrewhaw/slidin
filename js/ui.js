@@ -41,26 +41,19 @@ $(document).ready(function(){
     });​ 
     
     
-
-	// Week 01 interactions
-	$(".ah").hover( function() { 
-		$(this).stop(true,true);
-		$(this).fadeOut(100);
-		temp = $(this).html();
-		$(this).html("ryshkewich");
-		$(this).fadeIn(100);
-	}, function() { 
-		$(this).stop(true,true);
-		$(this).fadeOut(100);
-		$(this).html(temp);
-		$(this).fadeIn(100);
+	
+	// Things to do when the slide changes	
+	$(document).bind('deck.change', function(event, from, to) {
+	
+		// Only load iFrames when specified to
+		$(".slide:eq("+to+")").find("iframe").prop("src", function(){
+			return $(this).attr("data-src");
+	    });
+	
 	});
 
 
-
-
-
-			
+		
 });
 	
 $.extend(true, $.deck.defaults, {

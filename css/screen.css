@@ -186,6 +186,9 @@ body {
       height: auto;
       width: auto;
       margin: 0.5em 0; }
+    .slide-deck .slide iframe.scale {
+      max-width: 100%;
+      margin: 0.5em 0; }
     .slide-deck .slide .whisper {
       color: #efefef;
       transition: 0.5s; }
