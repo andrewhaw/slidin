@@ -73,16 +73,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php echo ($pgTitle); ?></title>
 		<?php if ($s!="") { include_once("./inc/deck-css.php"); } ?>
-		<link rel="stylesheet" href="/slidin/css/normalize.css" media="screen">
-		<link rel="stylesheet" href="/slidin/css/screen.css" media="screen">
-		<link rel="stylesheet" href="/slidin/css/print.css" media="print">
+		<link rel="stylesheet" href="<?php echo $dir; ?>slidin/css/normalize.css" media="screen">
+		<link rel="stylesheet" href="<?php echo $dir; ?>slidin/css/screen.css" media="screen">
+		<link rel="stylesheet" href="<?php echo $dir; ?>slidin/css/print.css" media="print">
 		<?php if ($css!="") { echo $css; } ?>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
 		<?php if ($s!="") { include_once("./inc/deck-js.php"); } ?>
-		<script type="text/javascript" src="/slidin/js/jquery.rot13.js"></script>
-		<script type="text/javascript" src="/slidin/js/ui.min.js"></script>
-		<script type="text/javascript" src="/slidin/js/email.min.js"></script>		
+		<script type="text/javascript" src="<?php echo $dir; ?>slidin/js/jquery.rot13.js"></script>
+		<script type="text/javascript" src="<?php echo $dir; ?>slidin/js/ui.min.js"></script>
+		<script type="text/javascript" src="<?php echo $dir; ?>slidin/js/email.min.js"></script>		
 		<?php if ($js!="") { echo $js; } ?>
 	</head>
 	
