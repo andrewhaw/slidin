@@ -1,0 +1,9 @@
+.s1-resize {
+	display: block;
+	padding: 0.25em 0.4em;
+	margin: 0 1.5em;
+	position: fixed;
+	bottom: 25%;
+	right: 0;
+	background-color: rgb(225,225,225);
+}
