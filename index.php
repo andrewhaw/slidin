@@ -3,11 +3,13 @@
 
 <?php
 
+	$version = "0.3";
+
 	// ---------------------------------------------------------------------------------
 	// DECK.JS is build by Caleb of 'I make web-things' (http://imakewebthings.com/deck.js/)
 	// CODEMIRROR is build by Marijn Haverbek (http://codemirror.net/)
 	// Slidin' is a PHP/DECK.JS/CODEMIRROR combo package built as an easy-to-deploy slide package
-	// v0.2 - July 2013
+	// v0.3 - Oct 2013
 	//
 	// To set universals, please visit setup.php in the '/inc' folder
 	// Please avoid editing pages unless you know what's happening
@@ -76,14 +78,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php echo ($pgTitle); ?></title>
 		<?php if ($s!="") { include_once("./inc/deck-css.php"); } ?>
-		<link rel="stylesheet" href="<?php echo $dir; ?>slidin/css/normalize.css">
-		<link rel="stylesheet" href="<?php echo $dir; ?>slidin/css/slidin-v0.1.css">
+		<link rel="stylesheet" href="<?php echo $dir; ?>slidin/css/slidin-combo-<?php echo $version; ?>.css">
 		<?php if ($css!="") { echo $css; } ?>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
-		<?php if ($s!="") { include_once("./inc/deck-js.php"); } ?>
-		<script type="text/javascript" src="<?php echo $dir; ?>slidin/js/jquery.rot13.js"></script>
-		<script type="text/javascript" src="<?php echo $dir; ?>slidin/js/ui.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="<?php echo $dir; ?>slidin/js/slidin-combo-<?php echo $version; ?>.min.js"></script>
+		<script type="text/javascript" src="<?php echo $dir; ?>slidin/js/jquery.rot13.min.js"></script>
 		<script type="text/javascript" src="<?php echo $dir; ?>slidin/js/email.min.js"></script>		
 		<?php if ($js!="") { echo $js; } ?>
 	</head>
